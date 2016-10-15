@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+ELIMINAR POKEMON
+{% endblock %}
+
+{% block content %}
+<h2>Estas seguro que quieres eliminar el pokemon {{ object.name }}? </h2>
+<br>
+<form method = "POST" action="">
+    {% csrf_token %}
+    <input type = "submit" value="Confirmar"/>
+    <a href="{% url 'home' %}">Cancelar</a>
+</form>
+{% endblock %}

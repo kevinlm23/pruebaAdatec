@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Pokemon</title>
+</head>
+<body>
+{% block content %}
+<h1>Elija el pokemon que desea eliminar</h1>
+<br>
+<ul>
+    {% for object in object_list %}
+        <li> <a href="{{ object.get_success_url_one }}">{{object|upper}} </a> </li>
+    {% empty %}
+        <li>No hay ningun Pokemon</li>
+    {% endfor %}
+</ul>
+
+<input type="button" value="volver" onclick="history.back()"/>
+
+{% endblock %}
+</body>
+</html>

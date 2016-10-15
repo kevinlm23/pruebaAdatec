@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Pokemon</title>
+</head>
+<body>
+<h1>Crear Pokemon</h1>
+<form method = "POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type = "submit" value="Crear"/>
+</form>
+<br>
+<input type="button" value="volver" onclick="history.back()"/>
+</body>
+</html>

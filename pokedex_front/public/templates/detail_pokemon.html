@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+DETALLES DEL POKEMON
+{% endblock %}
+
+{% block content %}
+<h1>DETALLES DEL POKEMON</h1>
+<br>
+<h3>Nombre: {{ object.name }}</h3>
+<h3>Tipo: {{ object.type }}</h3>
+<h3>Habilidad: {{ object.hability }}</h3>
+<h3>Peso: {{ object.weight }}</h3>
+<h3>Altura: {{ object.height }}</h3>
+<h3>Descripcion: {{ object.description }}</h3>
+<br>
+<br>
+<a href="{% url 'home' %}">Volver</a>
+{% endblock %}
+

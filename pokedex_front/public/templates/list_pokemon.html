@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pokemon</title>
+</head>
+<body>
+{% block content %}
+<h1>Listado de Pokemon</h1>
+<br>
+<ul>
+    {% for object in object_list %}
+        <li> <a href="{{ object.get_success_url }}">{{object|upper}} </a>  </li>
+    {% empty %}
+        <li>No hay ningun Pokemon</li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'home' %}">Volver</a>
+{% endblock %}
+</body>
+</html>
